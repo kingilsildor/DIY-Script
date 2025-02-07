@@ -4,7 +4,7 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
-base_url = "https://unosat-ai.web.cern.ch/files/AI20240912THA/statistics/"
+base_url = "URL"
 
 os.makedirs("downloaded_files", exist_ok=True)
 
