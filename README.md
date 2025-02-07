@@ -1,8 +1,8 @@
 # DIY-Bash_Script
-A collection of **custom Bash scripts** designed for **personal use**, **automation**, and **task optimization**. These scripts are crafted to simplify repetitive tasks, enhance productivity, and provide flexible solutions for various use cases.  
+A collection of **custom scripts** designed for **personal use**, **automation**, and **task optimization**. These scripts are crafted to simplify repetitive tasks, enhance productivity, and provide flexible solutions for various use cases.  
 
 ## Features 
-- Lightweight and easy-to-use Bash scripts.  
+- Lightweight and easy-to-use scripts.  
 - Customizable for personal or professional workflows.  
 - Includes examples for **file management**, **system monitoring**, **backup automation**, and more.  
 - Portable and platform-independent.  
@@ -18,13 +18,15 @@ A collection of **custom Bash scripts** designed for **personal use**, **automat
    ```bash
    git clone https://github.com/username/DIY-Bash_Script.git
    ```  
-2. Make the scripts executable:  
+2. Make the scripts executable if it is a bash script:  
    ```bash
    chmod +x script_name.sh
    ```  
 3. Execute the script:  
    ```bash
    ./script_name.sh
+   or
+   python script_name.py
    ```  
 
 ## Contributions 
