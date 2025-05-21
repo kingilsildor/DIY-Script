@@ -1,25 +1,24 @@
 import os
 from urllib.parse import urljoin
-
 import requests
 from bs4 import BeautifulSoup
+from tqdm import tqdm
 
-base_url = "URL"
-
-os.makedirs("downloaded_files", exist_ok=True)
+base_url = "https://unosat-ai.web.cern.ch/files/AI20240703MMR/statistics/"
+path = os.path.expanduser("~/CLS/2024-2025/Individual_Project/downloaded_files")
+os.makedirs(path, exist_ok=True)
 
 response = requests.get(base_url)
 response.raise_for_status()
 
 soup = BeautifulSoup(response.text, "html.parser")
+print("Connected!")
 
-for link in soup.find_all("a", href=True):
-    file_url = urljoin(base_url, link["href"])
+links = [link["href"] for link in soup.find_all("a", href=True) if not link["href"].endswith("/")]
 
-    if file_url.endswith("/"):
-        continue
-
-    filename = os.path.join("downloaded_files", link["href"])
+for link in tqdm(links, desc="Downloading Files", unit="file"):
+    file_url = urljoin(base_url, link)
+    filename = os.path.join(path, link)
 
     with requests.get(file_url, stream=True) as file_response:
         file_response.raise_for_status()
