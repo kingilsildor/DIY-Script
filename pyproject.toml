@@ -8,5 +8,8 @@ dependencies = [
     "beautifulsoup4>=4.13.3",
     "bs4>=0.0.2",
     "requests>=2.32.5",
+    "selenium>=4.44.0",
     "tqdm>=4.67.1",
+    "undetected-chromedriver>=3.5.5",
+    "webdriver-manager>=4.1.1",
 ]
